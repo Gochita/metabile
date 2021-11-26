@@ -2,7 +2,7 @@ package com.karendamore.metabile
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.recyclerview.widget.DividerItemDecoration
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.gson.Gson
 
@@ -23,7 +23,16 @@ class SitiosTuristicosListActivity : AppCompatActivity() {
 
         lugaresAdapter=LugaresAdapter(listLugares)
 
-        lugaresRecyclerView.addItemDecoration(DividerItemDecoration(this,DividerItemDecoration.VERTICAL))
+        //lugaresRecyclerView.addItemDecoration(DividerItemDecoration(this,DividerItemDecoration.VERTICAL))
+        lugaresRecyclerView.apply {
+
+            layoutManager = LinearLayoutManager(context)
+
+            adapter = lugaresAdapter
+
+            setHasFixedSize(false)
+
+        }
         lugaresRecyclerView.adapter=lugaresAdapter
     }
 

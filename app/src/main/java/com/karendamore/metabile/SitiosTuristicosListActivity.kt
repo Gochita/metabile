@@ -22,7 +22,7 @@ class SitiosTuristicosListActivity : AppCompatActivity() {
         listLugares= LoadMockLugaresFromJSON()
 
         lugaresAdapter=LugaresAdapter(listLugares)
-
+        //f
         //lugaresRecyclerView.addItemDecoration(DividerItemDecoration(this,DividerItemDecoration.VERTICAL))
         lugaresRecyclerView.apply {
 
